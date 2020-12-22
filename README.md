@@ -91,7 +91,7 @@ export default {
 </script>
 ```
 
-By default, Vue.js doesn't ship with a router. To resolve data based on route paramaters, we suggest using [Vue Router](https://router.vuejs.org/). You can install Vue Router easily by running `npm install vue-router` in your project or `vue add router` if you're using [Vue CLI](https://cli.vuejs.org/). Now you should be able to access data by id or slug.
+By default, Vue.js doesn't ship with a router. To resolve data based on route parameters, we suggest using [Vue Router](https://router.vuejs.org/). You can install Vue Router easily by running `npm install vue-router` in your project or `vue add router` if you're using [Vue CLI](https://cli.vuejs.org/). Now you should be able to access data by id or slug.
 
 ```js
 <script>

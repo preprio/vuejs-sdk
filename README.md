@@ -1,6 +1,6 @@
 # Prepr SDK for Vue.js
 
-This is the official Prepr SDK for Vue.js. It provided a standardized way for your team to communicate with the Prepr REST API.
+This is the official Prepr SDK for Vue.js. It provided a standardized way for your team to communicate with the Prepr API.
 
 ## Getting started
 
@@ -30,7 +30,7 @@ import App from './components/App.vue'
 import { PreprPlugin } from 'prepr-vue'
 
 Vue.use(PreprPlugin, {
-  baseUrl: 'https://api.eu1.prepr.io', // Default
+  baseUrl: 'https://cdn.prepr.io', // Default
   token: '<YOUR_ACCES_TOKEN>', // Required
   timeout: 4000, // Default
 })
@@ -43,7 +43,7 @@ new Vue({
 })
 ```
 
-By default, the base url will be `https://api.eu1.prepr.io` and the timeout before the request fails `4000` ms. The two values are not required. However. The `token` is required in order to make API calls. You can obtain the API token from the Prepr Dashboard.
+By default, the base url will be `https://cdn.prepr.io` and the timeout before the request fails `4000` ms. The two values are not required. However. The `token` is required in order to make API calls. You can obtain the API token from the Prepr Dashboard.
 
 ## Usage
 

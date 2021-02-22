@@ -1,4 +1,4 @@
-# Prepr SDK for Viue.js
+# Prepr SDK for Vue.js
 
 This is the official Prepr SDK for Vue.js. It provided a standardized way for your team to communicate with the Prepr REST API.
 

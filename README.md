@@ -16,7 +16,7 @@ And navigate to your new site.
 
 Once you've done that, you can simply install the plugin by running.
 
-`npm i prepr-vue`
+`npm i @preprio/vuejs-sdk`
 
 ### Configuration
 
@@ -27,12 +27,13 @@ Okay, now we can register the plugin inside `src/index.js` and modify the defaul
 
 import Vue from 'vue'
 import App from './components/App.vue'
-import { PreprPlugin } from 'prepr-vue'
+import { PreprPlugin } from '@preprio/vuejs-sdk'
 
 Vue.use(PreprPlugin, {
-  baseUrl: 'https://cdn.prepr.io', // Default
-  token: '<YOUR_ACCES_TOKEN>', // Required
-  timeout: 4000, // Default
+  token: null,
+  baseUrl: 'https://cdn.prepr.io',
+  timeout: 4000,
+  userId: null,
 })
 
 Vue.config.productionTip = false
@@ -59,31 +60,10 @@ export default {
   },
 
   async mounted() {
-    const publications = await this.$prepr('/publications', {
-      query: `
-        items {
-          header_image {
-            cdn_files {
-              resized {
-                thumb.w(1280).h(720)
-              }
-            }
-          },
-          elements {
-            cover {
-              cdn_files {
-                resized {
-                  thumb.w(1920)
-                }
-              }
-            }
-          }
-        },
-        title,
-        tags,
-        model
-      `
-    })
+    const publication = await $prepr
+      .path(`/publications/${id}`)
+      .query('...')
+      .fetch();
 
     this.publications = publications
   },
@@ -105,9 +85,9 @@ export default {
   async mounted() {
     const id = $route.params.id
 
-    const publication = await this.$prepr(`/publications/${id}`, {
-      // ...
-    })
+    const publication = await this.$prepr
+      .path(`/publications/${id}`)
+      .fetch()
 
     this.publication = publication
   },
@@ -115,14 +95,6 @@ export default {
 </script>
 ```
 
-## Available parameters
+## More info
 
-In the previous examples you can see how queries are executed and how `$prepr` is used in different contexts. Aside from `query`, you can also pass along a `sort` and `limit` parameter. With sort you can specify the sorting order by column, and with limit you can specify the maximum amount of records you wish to receive.
-
-```js
-const publication = await this.$prepr(`/publications/${id}`, {
-  query: `...`,
-  limit: 4,
-  sort: 'title',
-})
-```
+Want to know all available methods? Read more at [@preprio/nodejs-sdk](https://prepr.dev/docs/technologies/v1/introduction-node).

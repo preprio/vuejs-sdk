@@ -6,8 +6,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "abort-controller": "^3.0.0",
-    "node-fetch": "^2.6.1"
+    "@preprio/nodejs-sdk": "^1.0.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"

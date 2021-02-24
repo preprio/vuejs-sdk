@@ -1,13 +1,12 @@
 {
-  "name": "prepr-vue",
+  "name": "@preprio/vuejs-sdk",
   "version": "1.0.0",
   "description": "The official Prepr SDK for Vue.js",
   "main": "lib/plugin.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "abort-controller": "^3.0.0",
-    "node-fetch": "^2.6.1"
+    "@preprio/nodejs-sdk": "^1.0.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"

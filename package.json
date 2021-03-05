@@ -1,12 +1,12 @@
 {
   "name": "@preprio/vuejs-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The official Prepr SDK for Vue.js",
   "main": "lib/plugin.js",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@preprio/nodejs-sdk": "^1.0.1"
+    "@preprio/nodejs-sdk": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "^2.2.1"

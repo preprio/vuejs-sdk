@@ -97,4 +97,4 @@ export default {
 
 ## More info
 
-Want to know all available methods? Read more at [@preprio/nodejs-sdk](https://prepr.dev/docs/technologies/v1/introduction-node).
+Want to know all available methods? Read more at [@preprio/nodejs-sdk](https://prepr.dev/docs/technologies/v1/introduction-node) or join our community on [Slack](https://slack.prepr.io). 
